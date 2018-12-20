@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 @interface BBPhotoCache : NSObject
 
+@property (nonatomic, readonly, class) BBPhotoCache *sharedCache;
+
+-(void)cacheImageData: (NSData *)data
+        forIdentifier: (NSInteger)identifier;
+
+-(NSData *)imageDataForIdentifier: (NSInteger)identifier;
+
 @end
 
-NS_ASSUME_NONNULL_END
+

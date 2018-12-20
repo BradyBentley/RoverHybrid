@@ -10,4 +10,9 @@
 
 @implementation BBPhotoCollectionViewCell
 
+- (void)prepareForReuse
+{
+    self.photoImageView.image = [UIImage imageNamed:@"MarsPlaceholder"];
+}
+
 @end

@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BBSolDescription : NSObject
 
+@property (nonatomic, readonly) NSInteger sol;
+@property (nonatomic, readonly) NSInteger numberOfPhotos;
+@property (nonatomic, readonly) NSArray<NSString *> *cameras;
+
+// MARK: - Initialization
+-(instancetype)initWithDictionary: (NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

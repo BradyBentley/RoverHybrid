@@ -7,87 +7,93 @@
 //
 
 #import "BBPhotoCollectionViewController.h"
+#import "BBMarsRoverClient.h"
+#import "BBRoverPhotos.h"
+#import "BBPhotoCache.h"
+#import "BBPhotoCollectionViewCell.h"
+#import "RoverHybrid-Bridging-Header.h"
+#import "RoverHybrid-Swift.h"
+
 
 @interface BBPhotoCollectionViewController ()
+
+@property (nonatomic, readonly) BBMarsRoverClient *client;
+@property (nonatomic) NSArray *photos;
 
 @end
 
 @implementation BBPhotoCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"PhotoCell";
+
+// MARK: - Methods
+-(void)fetchPostReferences
+{
+    [BBMarsRoverClient fetchPhotosFromRover:self.rover onSol:self.sol.sol withCompletion:^(NSArray *photos, NSError *error) {
+        if (error) {
+            NSLog(@"Error fetching photos for collection view");
+            return;
+        };
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.photos = photos;
+        });
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fetchPostReferences];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
 }
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqual:@"ToPhotoDetail"]){
+        NSIndexPath *indexPath = [[self collectionView] indexPathsForSelectedItems][0];
+        PhotoDetailViewController *destinationVC = [segue destinationViewController];
+        BBRoverPhotos *photo = [self photos][indexPath.row];
+//        destinationVC.photo = photo;
+    }
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return [[self photos] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+    BBPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    BBRoverPhotos *photo = [self photos][indexPath.row];
+    BBPhotoCache *cache = [BBPhotoCache sharedCache];
+    NSData *cacheData = [cache imageDataForIdentifier:photo.identifier];
+    if (cache != nil){
+        UIImage *image = [UIImage imageWithData: cacheData];
+        cell.photoImageView.image = image;
+    } else {
+        cell.photoImageView.image = [UIImage imageNamed: @"MarsPlaceholder"];
+    }
+    [BBMarsRoverClient fetchImageDataForPhoto:photo withCompeltion:^(NSData *imageData, NSError *error) {
+        if (error) {
+            NSLog(@"Error fetching image Data for photos");
+            return;
+        }
+        [cache cacheImageData:imageData forIdentifier:photo.identifier];
+        UIImage *image = [UIImage imageWithData:imageData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (![indexPath isEqual: [collectionView indexPathForCell:cell]]){
+                return;
+            }
+            cell.photoImageView.image = image;
+        });
+    }];
     return cell;
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

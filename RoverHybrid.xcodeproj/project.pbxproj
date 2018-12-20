@@ -8,24 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		266E439321CAE61600F02A7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E439221CAE61600F02A7A /* AppDelegate.m */; };
-		266E439621CAE61600F02A7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E439521CAE61600F02A7A /* ViewController.m */; };
 		266E439921CAE61600F02A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266E439721CAE61600F02A7A /* Main.storyboard */; };
-		266E439B21CAE61700F02A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266E439A21CAE61700F02A7A /* Assets.xcassets */; };
 		266E439E21CAE61700F02A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266E439C21CAE61700F02A7A /* LaunchScreen.storyboard */; };
 		266E43A121CAE61700F02A7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43A021CAE61700F02A7A /* main.m */; };
+		266E43AA21CAE66200F02A7A /* BBMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43A921CAE66200F02A7A /* BBMarsRover.m */; };
+		266E43AF21CAE77A00F02A7A /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 266E43AE21CAE77A00F02A7A /* APIKeys.plist */; };
+		266E43B221CAEE0E00F02A7A /* BBRoverPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43B121CAEE0E00F02A7A /* BBRoverPhotos.m */; };
+		266E43B521CAF16800F02A7A /* BBSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43B421CAF16800F02A7A /* BBSolDescription.m */; };
+		266E43B821CAFDE600F02A7A /* BBMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43B721CAFDE600F02A7A /* BBMarsRoverClient.m */; };
+		266E43BB21CBE6E700F02A7A /* BBRoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43BA21CBE6E700F02A7A /* BBRoverTableViewController.m */; };
+		266E43C321CBEF7100F02A7A /* BBSolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43C221CBEF7100F02A7A /* BBSolTableViewController.m */; };
+		266E43C621CBEFA000F02A7A /* BBPhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E43C521CBEFA000F02A7A /* BBPhotoCollectionViewController.m */; };
+		266FD2DE21CC38AE008CCD75 /* BBPhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 266FD2DD21CC38AE008CCD75 /* BBPhotoCache.m */; };
+		266FD2E121CC47D0008CCD75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266FD2E021CC47D0008CCD75 /* Assets.xcassets */; };
+		266FD2E421CC4AE9008CCD75 /* BBPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 266FD2E321CC4AE9008CCD75 /* BBPhotoCollectionViewCell.m */; };
+		266FD2E821CC53DA008CCD75 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266FD2E721CC53DA008CCD75 /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		266E438E21CAE61600F02A7A /* RoverHybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoverHybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266E439121CAE61600F02A7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		266E439221CAE61600F02A7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		266E439421CAE61600F02A7A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		266E439521CAE61600F02A7A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		266E439821CAE61600F02A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		266E439A21CAE61700F02A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266E439D21CAE61700F02A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		266E439F21CAE61700F02A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		266E43A021CAE61700F02A7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		266E43A821CAE66200F02A7A /* BBMarsRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBMarsRover.h; sourceTree = "<group>"; };
+		266E43A921CAE66200F02A7A /* BBMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBMarsRover.m; sourceTree = "<group>"; };
+		266E43AE21CAE77A00F02A7A /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
+		266E43B021CAEE0E00F02A7A /* BBRoverPhotos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRoverPhotos.h; sourceTree = "<group>"; };
+		266E43B121CAEE0E00F02A7A /* BBRoverPhotos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBRoverPhotos.m; sourceTree = "<group>"; };
+		266E43B321CAF16800F02A7A /* BBSolDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSolDescription.h; sourceTree = "<group>"; };
+		266E43B421CAF16800F02A7A /* BBSolDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSolDescription.m; sourceTree = "<group>"; };
+		266E43B621CAFDE600F02A7A /* BBMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBMarsRoverClient.h; sourceTree = "<group>"; };
+		266E43B721CAFDE600F02A7A /* BBMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBMarsRoverClient.m; sourceTree = "<group>"; };
+		266E43B921CBE6E700F02A7A /* BBRoverTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBRoverTableViewController.h; sourceTree = "<group>"; };
+		266E43BA21CBE6E700F02A7A /* BBRoverTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBRoverTableViewController.m; sourceTree = "<group>"; };
+		266E43C121CBEF7100F02A7A /* BBSolTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSolTableViewController.h; sourceTree = "<group>"; };
+		266E43C221CBEF7100F02A7A /* BBSolTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSolTableViewController.m; sourceTree = "<group>"; };
+		266E43C421CBEFA000F02A7A /* BBPhotoCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBPhotoCollectionViewController.h; sourceTree = "<group>"; };
+		266E43C521CBEFA000F02A7A /* BBPhotoCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBPhotoCollectionViewController.m; sourceTree = "<group>"; };
+		266FD2DC21CC38AE008CCD75 /* BBPhotoCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBPhotoCache.h; sourceTree = "<group>"; };
+		266FD2DD21CC38AE008CCD75 /* BBPhotoCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBPhotoCache.m; sourceTree = "<group>"; };
+		266FD2E021CC47D0008CCD75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		266FD2E221CC4AE9008CCD75 /* BBPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		266FD2E321CC4AE9008CCD75 /* BBPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		266FD2E621CC53DA008CCD75 /* RoverHybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoverHybrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		266FD2E721CC53DA008CCD75 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +89,74 @@
 			children = (
 				266E439121CAE61600F02A7A /* AppDelegate.h */,
 				266E439221CAE61600F02A7A /* AppDelegate.m */,
-				266E439421CAE61600F02A7A /* ViewController.h */,
-				266E439521CAE61600F02A7A /* ViewController.m */,
-				266E439721CAE61600F02A7A /* Main.storyboard */,
-				266E439A21CAE61700F02A7A /* Assets.xcassets */,
-				266E439C21CAE61700F02A7A /* LaunchScreen.storyboard */,
-				266E439F21CAE61700F02A7A /* Info.plist */,
-				266E43A021CAE61700F02A7A /* main.m */,
+				266E43B621CAFDE600F02A7A /* BBMarsRoverClient.h */,
+				266E43B721CAFDE600F02A7A /* BBMarsRoverClient.m */,
+				266E43A721CAE63100F02A7A /* Resources */,
+				266E43AB21CAE66D00F02A7A /* Models */,
+				266E43BD21CBE70200F02A7A /* ViewControllers */,
+				266FD2DF21CC38BB008CCD75 /* ModelControllers */,
+				266FD2E521CC4AF0008CCD75 /* Views */,
 			);
 			path = RoverHybrid;
+			sourceTree = "<group>";
+		};
+		266E43A721CAE63100F02A7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				266E439721CAE61600F02A7A /* Main.storyboard */,
+				266FD2E021CC47D0008CCD75 /* Assets.xcassets */,
+				266E439C21CAE61700F02A7A /* LaunchScreen.storyboard */,
+				266E439F21CAE61700F02A7A /* Info.plist */,
+				266E43AE21CAE77A00F02A7A /* APIKeys.plist */,
+				266E43A021CAE61700F02A7A /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		266E43AB21CAE66D00F02A7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				266E43A821CAE66200F02A7A /* BBMarsRover.h */,
+				266E43A921CAE66200F02A7A /* BBMarsRover.m */,
+				266E43B021CAEE0E00F02A7A /* BBRoverPhotos.h */,
+				266E43B121CAEE0E00F02A7A /* BBRoverPhotos.m */,
+				266E43B321CAF16800F02A7A /* BBSolDescription.h */,
+				266E43B421CAF16800F02A7A /* BBSolDescription.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		266E43BD21CBE70200F02A7A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				266E43B921CBE6E700F02A7A /* BBRoverTableViewController.h */,
+				266E43BA21CBE6E700F02A7A /* BBRoverTableViewController.m */,
+				266E43C121CBEF7100F02A7A /* BBSolTableViewController.h */,
+				266E43C221CBEF7100F02A7A /* BBSolTableViewController.m */,
+				266E43C421CBEFA000F02A7A /* BBPhotoCollectionViewController.h */,
+				266E43C521CBEFA000F02A7A /* BBPhotoCollectionViewController.m */,
+				266FD2E721CC53DA008CCD75 /* PhotoDetailViewController.swift */,
+				266FD2E621CC53DA008CCD75 /* RoverHybrid-Bridging-Header.h */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		266FD2DF21CC38BB008CCD75 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				266FD2DC21CC38AE008CCD75 /* BBPhotoCache.h */,
+				266FD2DD21CC38AE008CCD75 /* BBPhotoCache.m */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		266FD2E521CC4AF0008CCD75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				266FD2E221CC4AE9008CCD75 /* BBPhotoCollectionViewCell.h */,
+				266FD2E321CC4AE9008CCD75 /* BBPhotoCollectionViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +190,7 @@
 				TargetAttributes = {
 					266E438D21CAE61600F02A7A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -129,7 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				266E439E21CAE61700F02A7A /* LaunchScreen.storyboard in Resources */,
-				266E439B21CAE61700F02A7A /* Assets.xcassets in Resources */,
+				266E43AF21CAE77A00F02A7A /* APIKeys.plist in Resources */,
+				266FD2E121CC47D0008CCD75 /* Assets.xcassets in Resources */,
 				266E439921CAE61600F02A7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,8 +231,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				266E439621CAE61600F02A7A /* ViewController.m in Sources */,
+				266E43B821CAFDE600F02A7A /* BBMarsRoverClient.m in Sources */,
+				266E43AA21CAE66200F02A7A /* BBMarsRover.m in Sources */,
+				266E43C621CBEFA000F02A7A /* BBPhotoCollectionViewController.m in Sources */,
+				266E43B221CAEE0E00F02A7A /* BBRoverPhotos.m in Sources */,
+				266FD2E421CC4AE9008CCD75 /* BBPhotoCollectionViewCell.m in Sources */,
 				266E43A121CAE61700F02A7A /* main.m in Sources */,
+				266FD2E821CC53DA008CCD75 /* PhotoDetailViewController.swift in Sources */,
+				266FD2DE21CC38AE008CCD75 /* BBPhotoCache.m in Sources */,
+				266E43B521CAF16800F02A7A /* BBSolDescription.m in Sources */,
+				266E43BB21CBE6E700F02A7A /* BBRoverTableViewController.m in Sources */,
+				266E43C321CBEF7100F02A7A /* BBSolTableViewController.m in Sources */,
 				266E439321CAE61600F02A7A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,14 +384,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RoverHybrid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RoverHybrid/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradybentley.RoverHybrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoverHybrid/ViewControllers/RoverHybrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,14 +404,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RoverHybrid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RoverHybrid/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradybentley.RoverHybrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoverHybrid/ViewControllers/RoverHybrid-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

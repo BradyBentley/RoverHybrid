@@ -7,11 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BBMarsRover.h"
+#import "BBRoverPhotos.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface BBMarsRoverClient : NSObject
 
-@end
+// MARK: - Methods
++(void)fetchAllMarsRoversWithCompletion: (void(^)(NSArray *roverNames , NSError *error))completion;
 
-NS_ASSUME_NONNULL_END
++(void)fetchMissionManifestForRoverNamed: (NSString *)named
+                                  withCompletion: (void(^)(BBMarsRover *rover, NSError *error))completion;
+
++(void)fetchPhotosFromRover: (BBMarsRover *)rover
+                              onSol: (NSInteger )sol
+                     withCompletion: (void(^)(NSArray *photos, NSError *error))completion;
+
++(void)fetchImageDataForPhoto: (BBRoverPhotos* )photo
+                       withCompeltion: (void(^)(NSData *imageData, NSError *error))completion;
+
+@end

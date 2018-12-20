@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBSolDescription.h"
+#import "BBMarsRover.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BBPhotoCollectionViewController : UICollectionViewController
+
+@property (nonatomic) BBSolDescription *sol;
+@property (nonatomic) BBMarsRover *rover;
 
 @end
 

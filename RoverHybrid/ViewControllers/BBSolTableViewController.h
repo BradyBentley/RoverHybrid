@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBMarsRover.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BBSolTableViewController : UITableViewController
+
+@property (nonatomic) BBMarsRover *rover;
 
 @end
 
